@@ -77,7 +77,10 @@ input#code {
   outline: none;
   border: 2px solid var(--primary);
   border-radius: 4px;
-  background: #fff;
+  background-color: #fff;
+  background: url(img/copy.svg);
+  background-repeat: no-repeat;
+  background-position: 4px center;
   display: block;
   width: 100%;
 }

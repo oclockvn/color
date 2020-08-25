@@ -36,3 +36,6 @@ function codeChanged(event) {
   hslRes.innerText = color.toHslString();
   cmykRes.innerText = color.toCmykString();
 }
+
+// init data first load
+codeChanged('#000');
