@@ -8,8 +8,17 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: consolas, roboto, sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 input[type="color"]::-webkit-color-swatch-wrapper {
@@ -23,8 +32,9 @@ input[type="color"]::-webkit-color-swatch {
 
 .container {
   max-width: 600px;
+  min-width: 600px;
   margin: auto;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 .flex {
@@ -35,6 +45,7 @@ input[type="color"]::-webkit-color-swatch {
 
 .flex-fill {
   flex: 1;
+  margin-right: 0.5rem;
 }
 
 input#color {
@@ -67,6 +78,8 @@ input#code {
   border: 2px solid var(--primary);
   border-radius: 4px;
   background: #fff;
+  display: block;
+  width: 100%;
 }
 
 .color label {
@@ -76,4 +89,35 @@ input#code {
 
 .color + .color {
   margin-top: .5rem;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    display: block;
+  }
+
+  #color {
+    max-width: 100px;
+    max-height: 100px;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  }
+
+  .color {
+    display: block;
+  }
+
+  .flex {
+    flex-direction: column-reverse;
+  }
+
+  .flex-fill {
+    margin-right: 0;
+  }
+
+  .flex > div {
+    flex: 1;
+    width: 100%;
+  }
 }
