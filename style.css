@@ -122,4 +122,8 @@ input#code {
     flex: 1;
     width: 100%;
   }
+
+  .rgba-range {
+    margin-left: 0;
+  }
 }
