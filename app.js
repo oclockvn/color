@@ -22,12 +22,12 @@ function colorChanged(event) {
 function codeChanged(event) {
   const eventValue = typeof(event) === 'string' ? event : event.target.value;
   const value = (eventValue || '').toLowerCase().trim();
-
+  
   const color = w3color(value);
   if (!color.valid) {
     return;
   }
-
+  
   colorInput.value = color.toHexString();
   rgbRes.innerText = color.toRgbString();
   nameRes.innerText = color.toName();
@@ -39,3 +39,10 @@ function codeChanged(event) {
 
 // init data first load
 codeChanged('#000');
+
+// copy to clipboard
+new ClipboardJS('button', {
+  text: function(trigger) {
+    return trigger.innerText;
+  }
+});
