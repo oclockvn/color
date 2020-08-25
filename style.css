@@ -91,7 +91,17 @@ input#code {
 }
 
 .color + .color {
-  margin-top: .5rem;
+  margin-top: 1rem;
+}
+
+.rgba-range {
+  margin-top: .25rem;
+  margin-bottom: 1rem;
+  margin-left: 50px;
+}
+
+#rgba-range {
+  width: 100%;
 }
 
 @media screen and (max-width: 600px) {
